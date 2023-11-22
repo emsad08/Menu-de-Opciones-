@@ -1,0 +1,50 @@
+using System;
+
+public class Monaso{
+	public static void Main(string[] args){
+		string[] nombres={"fer","alma","maribel","camila"};
+		foreach(string n in nombres){
+			Console.WriteLine("Hola "+n);
+		}
+		Console.WriteLine("--------------------");
+		for(int i=0;i<nombres.Length;i++){
+			Console.WriteLine("Hola "+nombres[i]);
+		}
+	}
+}
+
+//31  switch
+
+using System;
+
+
+public class Monaso{
+	public static void Main(string[] args){
+		int opc=0;
+		try{
+			Console.WriteLine("Hola elige una opcion:\n1. Iniciar\n2. Detener\n3. Reiniciar\n4. Estado\n (escribe el numero):");
+			opc=int.Parse(Console.ReadLine());
+			switch(opc){
+				case 1:
+				Console.WriteLine("Iniciando el proceso..."); 
+				break;
+				case 2:
+				Console.WriteLine("Deteniendo el proceso..."); 
+				break;
+				case 3:
+				Console.WriteLine("Reiniciando el proceso..."); 
+				break;
+				case 4:
+				Console.WriteLine("Mostrar el estado del proceso..."); 
+				break;
+				default:
+				Console.WriteLine("No existe la opcion..."); 
+				break;
+			}
+
+		}catch(Exception ex){
+			Console.WriteLine("Ha ocurrido un error: "+ex.Message);
+		}
+	}
+}
+
